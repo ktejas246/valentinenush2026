@@ -1,89 +1,80 @@
-/* ===== GLOBAL RESET ===== */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
 }
 
-/* ✅ YES PAGE BACKGROUND */
-.yespage {
-  background: linear-gradient(to bottom, #ffe6f2, #ffd1dc);
-  min-height: 100vh;
-  padding: 25px;
-  overflow-y: auto;
-}
-
-/* ✅ TITLE */
-.love-title {
-  font-size: 42px;
-  color: #ff2d7a;
-  margin-bottom: 20px;
-}
-
-/* ✅ Stars */
-.yespage::before {
-  content: "✨ ✦ ✨ ✦ ✨ ✦ ✨";
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 8%;
-  opacity: 0.5;
-  font-size: 18px;
-  animation: starsMove 10s linear infinite;
-}
-
-@keyframes starsMove {
-  from { transform: translateX(-100%); }
-  to   { transform: translateX(100%); }
-}
-
-/* ✅ FORCE ALL IMAGES SMALL (THE REAL FIX) */
-.yespage img {
-  width: 90px !important;
-  height: 90px !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-  border: 4px solid white !important;
-  box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.4) !important;
-  margin: 8px !important;
-}
-
-/* ✅ Container alignment */
-.container {
+/* Page 1 */
+.home {
+  background: pink;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-/* ✅ Rows */
-.row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
 }
 
-/* ✅ Letter */
+h1 {
+  font-size: 40px;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.yes {
+  background: red;
+  color: white;
+}
+
+.no {
+  background: gray;
+  color: white;
+  border: none;
+}
+
+/* Page 2 */
+.yespage {
+  background: #ffe6f2;
+  padding: 30px;
+}
+
+.love-title {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.photo-frame img {
+  width: 130px;
+  height: 130px;
+  border-radius: 20px;
+  margin: 10px;
+  border: 4px solid white;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
 .letter {
   background: white;
-  max-width: 650px;
-  margin: 25px auto;
-  padding: 30px;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
   border-radius: 20px;
-  font-size: 18px;
-  line-height: 1.6;
-  box-shadow: 0px 0px 20px rgba(255, 105, 180, 0.3);
-}
-
-.letter h2 {
-  color: #ff2d7a;
-}
-
-/* ✅ Mobile even smaller */
-@media (max-width: 600px) {
-  .yespage img {
-    width: 75px !important;
-    height: 75px !important;
-  }
+  font-size: 20px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
 }
