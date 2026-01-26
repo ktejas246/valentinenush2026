@@ -7,9 +7,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Smooth animations */
 * {
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 /* ===== Page 1 (Home) ===== */
@@ -21,18 +20,18 @@ body {
   align-items: center;
 }
 
-/* Main Proposal Box */
+/* Proposal Box */
 .box {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 50px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 45px;
   border-radius: 25px;
-  box-shadow: 0px 0px 30px rgba(255, 105, 180, 0.5);
+  box-shadow: 0px 0px 25px rgba(255, 105, 180, 0.45);
   animation: popIn 1s ease;
 }
 
 @keyframes popIn {
   from {
-    transform: scale(0.7);
+    transform: scale(0.75);
     opacity: 0;
   }
   to {
@@ -42,9 +41,9 @@ body {
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 42px;
   color: #ff2d7a;
-  text-shadow: 2px 2px 10px rgba(255, 0, 100, 0.3);
+  text-shadow: 2px 2px 10px rgba(255, 0, 100, 0.25);
 }
 
 /* Buttons */
@@ -53,11 +52,11 @@ h1 {
 }
 
 .btn {
-  padding: 15px 35px;
+  padding: 14px 32px;
   font-size: 20px;
-  border-radius: 20px;
+  border-radius: 18px;
   text-decoration: none;
-  margin: 15px;
+  margin: 12px;
   cursor: pointer;
   font-weight: bold;
 }
@@ -65,11 +64,11 @@ h1 {
 .yes {
   background: #ff2d7a;
   color: white;
-  box-shadow: 0px 0px 15px rgba(255, 45, 122, 0.6);
+  box-shadow: 0px 0px 12px rgba(255, 45, 122, 0.5);
 }
 
 .yes:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .no {
@@ -78,15 +77,11 @@ h1 {
   border: none;
 }
 
-.no:hover {
-  transform: scale(1.05);
-}
-
 /* ===== Page 2 Background ===== */
 .yespage {
   background: linear-gradient(to bottom, #ffe6f2, #ffd1dc);
   min-height: 100vh;
-  padding: 40px 20px;
+  padding: 35px 15px;
   position: relative;
   overflow: hidden;
 }
@@ -96,17 +91,17 @@ h1 {
 .yespage::after {
   content: "✨ ✦ ✨ ✦ ✨ ✦ ✨";
   position: absolute;
-  font-size: 28px;
-  color: rgba(255, 255, 255, 0.8);
   width: 100%;
-  animation: floatStars 8s linear infinite;
+  font-size: 22px;
+  opacity: 0.75;
+  animation: floatStars 9s linear infinite;
 }
 
 .yespage::after {
-  top: 60%;
-  font-size: 22px;
-  opacity: 0.6;
-  animation-duration: 10s;
+  top: 65%;
+  font-size: 18px;
+  opacity: 0.5;
+  animation-duration: 11s;
 }
 
 @keyframes floatStars {
@@ -120,79 +115,91 @@ h1 {
 
 /* ===== Romantic Title ===== */
 .love-title {
-  font-size: 50px;
+  font-size: 46px;
   color: #ff2d7a;
-  text-shadow: 2px 2px 15px rgba(255, 0, 100, 0.4);
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   animation: glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
   from {
-    text-shadow: 0px 0px 10px rgba(255, 45, 122, 0.5);
+    text-shadow: 0px 0px 8px rgba(255, 45, 122, 0.5);
   }
   to {
-    text-shadow: 0px 0px 25px rgba(255, 45, 122, 1);
+    text-shadow: 0px 0px 18px rgba(255, 45, 122, 0.95);
   }
 }
 
-/* ===== Photo Styling ===== */
-.circle {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 6px solid white;
-  box-shadow: 0px 0px 20px rgba(255, 105, 180, 0.5);
-}
-
-.circle:hover {
-  transform: scale(1.15) rotate(3deg);
-}
-
-/* Row Layout */
-.row {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin: 20px 0;
-}
-
-/* Container */
+/* ===== Photo Layout ===== */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 15px 0;
+}
+
+/* ✅ PERFECT IMAGE SIZE (Not too big) */
+.circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0px 0px 15px rgba(255, 105, 180, 0.4);
+}
+
+/* Cute Hover */
+.circle:hover {
+  transform: scale(1.08) rotate(2deg);
+}
+
+/* ✅ Mobile Responsive Fix */
+@media (max-width: 600px) {
+  .circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .letter {
+    font-size: 18px;
+    padding: 25px;
+  }
+}
+
 /* ===== Love Letter Box ===== */
 .letter {
-  background: rgba(255, 255, 255, 0.95);
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 35px;
+  background: rgba(255, 255, 255, 0.96);
+  max-width: 680px;
+  margin: 25px auto;
+  padding: 32px;
   border-radius: 25px;
   font-size: 20px;
   line-height: 1.7;
-  box-shadow: 0px 0px 25px rgba(255, 105, 180, 0.35);
-  animation: fadeIn 2s ease;
+  box-shadow: 0px 0px 22px rgba(255, 105, 180, 0.3);
+  animation: fadeIn 1.5s ease;
 }
 
 .letter h2 {
   color: #ff2d7a;
-  font-size: 28px;
-  margin-bottom: 15px;
+  font-size: 27px;
+  margin-bottom: 12px;
 }
 
 .letter p {
   color: #444;
 }
 
-/* Letter Fade Animation */
+/* Fade-in Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(18px);
   }
   to {
     opacity: 1;
