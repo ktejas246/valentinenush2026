@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine Proposal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+
+  <div class="box">
+    <h1>Will you be my Valentine? 💖</h1>
+
+    <div class="buttons">
+      <a href="yes.html" class="btn yes">Yes</a>
+      <button class="btn no" onclick="moveButton()">No</button>
+    </div>
+  </div>
+
+  <script>
+    function moveButton() {
+      const btn = document.querySelector(".no");
+      btn.style.position = "absolute";
+      btn.style.left = Math.random() * 80 + "%";
+      btn.style.top = Math.random() * 80 + "%";
+    }
+  </script>
+
+</body>
+</html>
