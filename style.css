@@ -1,13 +1,18 @@
+/* ===== GLOBAL RESET ===== */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
-/* Page 1 */
+/* ================================================= */
+/* ================= HOME PAGE ====================== */
+/* ================================================= */
+
 .home {
-  background: pink;
+  background: linear-gradient(to bottom right, #ffb6d5, #ffe6f2);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,66 +20,137 @@ body {
 }
 
 .box {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 25px rgba(255, 105, 180, 0.45);
 }
 
-h1 {
-  font-size: 40px;
+.home h1 {
+  font-size: 45px;
+  color: #ff2d7a;
+  margin-bottom: 30px;
 }
 
+/* Buttons */
 .buttons {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .btn {
-  padding: 15px 30px;
+  padding: 14px 35px;
   font-size: 20px;
-  border-radius: 15px;
+  border-radius: 18px;
   text-decoration: none;
-  margin: 15px;
+  margin: 12px;
   cursor: pointer;
-}
-
-.yes {
-  background: red;
-  color: white;
-}
-
-.no {
-  background: gray;
-  color: white;
+  font-weight: bold;
   border: none;
 }
 
-/* Page 2 */
-.yespage {
-  background: #ffe6f2;
-  padding: 30px;
+.yes {
+  background: #ff2d7a;
+  color: white;
 }
 
+.yes:hover {
+  transform: scale(1.08);
+}
+
+.no {
+  background: #444;
+  color: white;
+}
+
+.no:hover {
+  transform: scale(1.05);
+}
+
+/* ================================================= */
+/* ================= YES PAGE ======================= */
+/* ================================================= */
+
+.yespage {
+  background: linear-gradient(to bottom, #ffe6f2, #ffd1dc);
+  min-height: 100vh;
+  padding: 25px;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Title */
 .love-title {
-  font-size: 45px;
+  font-size: 42px;
+  color: #ff2d7a;
   margin-bottom: 20px;
 }
 
-.photo-frame img {
-  width: 130px;
-  height: 130px;
-  border-radius: 20px;
-  margin: 10px;
-  border: 4px solid white;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+/* Floating Stars */
+.yespage::before {
+  content: "✨ ✦ ✨ ✦ ✨ ✦ ✨";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 8%;
+  opacity: 0.5;
+  font-size: 18px;
+  animation: starsMove 10s linear infinite;
 }
 
+@keyframes starsMove {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+
+/* Container + Rows */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ✅ PERFECT IMAGE SIZE FIX */
+.yespage img {
+  width: 85px !important;
+  height: 85px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 4px solid white !important;
+  box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.4) !important;
+  margin: 8px !important;
+}
+
+/* Letter Box */
 .letter {
   background: white;
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 25px;
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 30px;
   border-radius: 20px;
-  font-size: 20px;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  font-size: 18px;
+  line-height: 1.6;
+  box-shadow: 0px 0px 20px rgba(255, 105, 180, 0.3);
+}
+
+.letter h2 {
+  color: #ff2d7a;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .yespage img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .letter {
+    font-size: 17px;
+    padding: 22px;
+  }
 }
