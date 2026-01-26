@@ -1,99 +1,89 @@
-/* ===== Global Reset ===== */
+/* ===== GLOBAL RESET ===== */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
+  font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
 
-/* ✅ Allow scrolling always */
+/* ✅ YES PAGE BACKGROUND */
 .yespage {
-  overflow-y: auto;
-  min-height: 100vh;
-  padding: 30px 15px;
   background: linear-gradient(to bottom, #ffe6f2, #ffd1dc);
-  position: relative;
+  min-height: 100vh;
+  padding: 25px;
+  overflow-y: auto;
 }
 
-/* ===== Title ===== */
+/* ✅ TITLE */
 .love-title {
-  font-size: 45px;
+  font-size: 42px;
   color: #ff2d7a;
   margin-bottom: 20px;
 }
 
-/* ===== Floating Stars ===== */
+/* ✅ Stars */
 .yespage::before {
   content: "✨ ✦ ✨ ✦ ✨ ✦ ✨";
   position: absolute;
-  top: 10%;
-  left: 0;
   width: 100%;
-  font-size: 20px;
-  opacity: 0.6;
-  animation: floatStars 10s linear infinite;
+  left: 0;
+  top: 8%;
+  opacity: 0.5;
+  font-size: 18px;
+  animation: starsMove 10s linear infinite;
 }
 
-@keyframes floatStars {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(100%);
-  }
+@keyframes starsMove {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
 }
 
-/* ===== Container & Row Layout ===== */
+/* ✅ FORCE ALL IMAGES SMALL (THE REAL FIX) */
+.yespage img {
+  width: 90px !important;
+  height: 90px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 4px solid white !important;
+  box-shadow: 0px 0px 10px rgba(255, 105, 180, 0.4) !important;
+  margin: 8px !important;
+}
+
+/* ✅ Container alignment */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
 }
 
+/* ✅ Rows */
 .row {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap; /* ✅ prevents overflow */
+  flex-wrap: wrap;
 }
 
-/* ✅ HARD FIX: Force ALL images small */
-.row img {
-  width: 110px !important;
-  height: 110px !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-  border: 4px solid white;
-  box-shadow: 0px 0px 12px rgba(255, 105, 180, 0.4);
-}
-
-/* Hover Effect */
-.row img:hover {
-  transform: scale(1.08);
-}
-
-/* ✅ Mobile Fix */
-@media (max-width: 600px) {
-  .row img {
-    width: 85px !important;
-    height: 85px !important;
-  }
-}
-
-/* ===== Letter Box ===== */
+/* ✅ Letter */
 .letter {
   background: white;
   max-width: 650px;
+  margin: 25px auto;
   padding: 30px;
-  border-radius: 25px;
-  font-size: 19px;
-  line-height: 1.7;
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 1.6;
   box-shadow: 0px 0px 20px rgba(255, 105, 180, 0.3);
 }
 
 .letter h2 {
   color: #ff2d7a;
-  margin-bottom: 10px;
+}
+
+/* ✅ Mobile even smaller */
+@media (max-width: 600px) {
+  .yespage img {
+    width: 75px !important;
+    height: 75px !important;
+  }
 }
