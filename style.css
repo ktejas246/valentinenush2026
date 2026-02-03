@@ -1,4 +1,4 @@
-/* ===== GLOBAL RESET ===== */
+
 body {
   margin: 0;
   padding: 0;
@@ -6,10 +6,6 @@ body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
 }
-
-/* ================================================= */
-/* ================= HOME PAGE ====================== */
-/* ================================================= */
 
 .home {
   background: linear-gradient(to bottom right, #ffb6d5, #ffe6f2);
@@ -32,7 +28,6 @@ body {
   margin-bottom: 30px;
 }
 
-/* Buttons */
 .buttons {
   margin-top: 20px;
 }
@@ -66,10 +61,6 @@ body {
   transform: scale(1.05);
 }
 
-/* ================================================= */
-/* ================= YES PAGE ======================= */
-/* ================================================= */
-
 .yespage {
   background: linear-gradient(to bottom, #ffe6f2, #ffd1dc);
   min-height: 100vh;
@@ -78,14 +69,12 @@ body {
   position: relative;
 }
 
-/* Title */
 .love-title {
   font-size: 42px;
   color: #ff2d7a;
   margin-bottom: 20px;
 }
 
-/* Floating Stars */
 .yespage::before {
   content: "✨ ✦ ✨ ✦ ✨ ✦ ✨";
   position: absolute;
@@ -102,7 +91,6 @@ body {
   to   { transform: translateX(100%); }
 }
 
-/* Container + Rows */
 .container {
   display: flex;
   flex-direction: column;
@@ -115,7 +103,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* ✅ PERFECT IMAGE SIZE FIX */
 .yespage img {
   width: 85px !important;
   height: 85px !important;
@@ -126,7 +113,6 @@ body {
   margin: 8px !important;
 }
 
-/* Letter Box */
 .letter {
   background: white;
   max-width: 650px;
@@ -142,7 +128,6 @@ body {
   color: #ff2d7a;
 }
 
-/* Mobile */
 @media (max-width: 600px) {
   .yespage img {
     width: 70px !important;
@@ -154,3 +139,4 @@ body {
     padding: 22px;
   }
 }
+
